@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get A Quote</title>
+    <link rel="stylesheet" href="quote.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Get A Quote Here</h1>
+        <h3>Input Joomla, Wordpress or Custom</h3>
+        <form action="">
+            <input type="text" id="myQuote">
+            <button type="button" onclick="myFunction()">Get A Quote</button>
+        </form>
+        <p id="demo">See quote here _____________</p>
+    </div>
+
+    <script>
+        function myFunction() {
+             
+            let quote =  document.getElementById("myQuote").value;
+            let input = quote.toLowerCase();
+
+            if(input == "joomla") {
+                input = "If you want a Joomla website, the fee is <span>\
+                    &#8358</span>25,000.00k which will include Domain Name and Hosting for 1 year";
+            }
+            else if(input == "wordpress") {
+                input = "If you want a Wordpress website, the fee is <span>\
+                    &#8358</span>25,000.00k which will include Domain Name and Hosting for 1 year";
+            }
+            else if(input == "custom") {
+                input = "If you want a custom website, the fee is <span>\
+                    &#8358</span>100,000.00k which will include Domain Name and Hosting for 1 year";
+            }
+            else{
+                input = "You did not input anything to get a quote";
+            }
+            document.getElementById("demo").innerHTML = input;
+            document.getElementById("demo").style.fontSize = "30px";
+            document.getElementById("demo").style.color = "brown";
+        }
+    </script>
+    
+</body>
+</html>
